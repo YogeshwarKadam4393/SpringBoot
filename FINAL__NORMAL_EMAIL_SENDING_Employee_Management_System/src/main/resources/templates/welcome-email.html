@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+
+<!-- Ye HTML document mein Thymeleaf namespace declare karta hai. Iski help se hum th:text, 
+     th:if, th:each jaise Thymeleaf attributes use kar sakte hain 
+ -->
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Employee Welcome Email</title>
+</head>
+
+<body>
+
+	<h2>Congratulations!</h2>
+
+	<p>
+		<!-- Ye employee ka dynamic name HTML ke andar insert karta hai -->
+		Dear <b th:text="${employeeName}"></b>,
+	</p>
+
+	<p>Congratulations! You have been successfully hired.</p>
+
+	<p>Your employee registration is completed successfully.</p>
+
+	<h3>Employee Details</h3>
+
+	<p>
+		Employee Name:
+		<!-- Ye employee ka dynamic name HTML ke andar insert karta hai -->
+		<span th:text="${employeeName}"></span>
+	</p>
+
+	<p>
+		<!-- Ye employee ka dynamic Email HTML ke andar insert karta hai -->
+		Email: <span th:text="${employeeEmail}"></span>
+	</p>
+
+	<p>
+		<!-- Ye employee ka dynamic Designation HTML ke andar insert karta hai -->
+		Designation: <span th:text="${designation}"></span>
+	</p>
+
+	<p>
+		<!-- Ye employee ka dynamic Salary HTML ke andar insert karta hai -->
+		Salary: <span th:text="${salary}"></span>
+	</p>
+
+	<br>
+
+	<p>Thank You!</p>
+
+	<h4>HR Department</h4>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+
+<meta charset="UTF-8">
+
+<title>Welcome Email</title>
+
+</head>
+
+<body
+	style="margin: 0; padding: 0; background-color: #f4f6f9; font-family: Arial, sans-serif;">
+
+	<table width="100%" cellpadding="0" cellspacing="0"
+		style="background-color: #f4f6f9; padding: 30px 10px;">
+
+		<tr>
+
+			<td align="center">
+
+				<table width="600" cellpadding="0" cellspacing="0"
+					style="background-color: #ffffff; border-radius: 10px; overflow: hidden;">
+
+					<!-- HEADER -->
+
+					<tr>
+
+						<td align="center"
+							style="background-color: #1d4ed8; padding: 30px; color: white;">
+
+							<h1 style="margin: 0;">Welcome to Our Organization!</h1>
+
+							<p style="margin-top: 10px;">We are happy to have you on our
+								team.</p>
+
+						</td>
+
+					</tr>
+
+
+					<!-- BODY -->
+
+					<tr>
+
+						<td style="padding: 30px; color: #333333;">
+
+							<h2>
+								Hello <span th:text="${employeeName}">Employee</span>,
+							</h2>
+
+							<p style="line-height: 1.6;">Congratulations on joining our
+								organization. We are excited to have you as part of our team and
+								look forward to working with you.</p>
+
+
+							<h3 style="color: #1d4ed8;">Employee Details</h3> <!-- EMPLOYEE DETAILS TABLE -->
+
+							<table width="100%" cellpadding="10" cellspacing="0"
+								style="border-collapse: collapse;">
+
+								<tr style="background-color: #f1f5f9;">
+
+									<td><strong>Name</strong></td>
+
+									<td th:text="${employeeName}">Employee Name</td>
+
+								</tr>
+
+
+								<tr>
+
+									<td><strong>Email</strong></td>
+
+									<td th:text="${employeeEmail}">employee@gmail.com</td>
+
+								</tr>
+
+
+								<tr style="background-color: #f1f5f9;">
+
+									<td><strong>Designation</strong></td>
+
+									<td th:text="${designation}">Java Developer</td>
+
+								</tr>
+
+
+								<tr>
+
+									<td><strong>Salary</strong></td>
+
+									<td th:text="${salary}">50000</td>
+
+								</tr>
+
+
+								<tr style="background-color: #f1f5f9;">
+
+									<td><strong>City</strong></td>
+
+									<td th:text="${city}">Pune</td>
+
+								</tr>
+
+							</table>
+
+
+							<p style="margin-top: 25px; line-height: 1.6;">We wish you
+								great success in your professional journey with us.</p>
+
+
+							<p>
+
+								Best Regards,<br> <strong>HR Department</strong><br>
+
+								Google Hiring Team
+
+							</p>
+
+						</td>
+
+					</tr>
+
+
+					<!-- FOOTER -->
+
+					<tr>
+
+						<td align="center"
+							style="background-color: #f1f5f9; padding: 20px; color: #64748b;">
+
+							<p style="margin: 0;">This is an automatically generated
+								email.</p>
+
+							<p style="margin: 5px 0 0 0;">© 2026 Our Organization. All
+								Rights Reserved.</p>
+
+						</td>
+
+					</tr>
+
+				</table>
+
+			</td>
+
+		</tr>
+
+	</table>
+
+</body>
+
+</html>
